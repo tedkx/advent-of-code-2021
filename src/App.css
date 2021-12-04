@@ -13,7 +13,11 @@ code {
 }
 
 .app {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -22,7 +26,7 @@ code {
   }
 }
 
-.app-header {
+.header {
   background-color: #282c34;
   font-family: Consolas;
   min-height: 100px;
@@ -30,8 +34,20 @@ code {
   align-items: center;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color: #f2f2f2;
   padding: 0 25px;
+}
+.header a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+.header a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes App-logo-spin {
@@ -41,6 +57,11 @@ code {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* common */
+.bold {
+  font-weight: bold;
 }
 
 /* Transitions */
@@ -78,3 +99,21 @@ code {
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1);
 }
 
+.fade-up-enter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.fade-up-enter-active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+.fade-up-exit {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.fade-up-exit-active {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1);
+}

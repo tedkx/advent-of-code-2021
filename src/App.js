@@ -2,8 +2,11 @@ import React from 'react';
 import './App.css';
 import { Link, Routes, Route } from 'react-router-dom';
 import Day1 from './Day1';
+import Day2 from './Day2';
 
-const daysImplemented = 1;
+const routes = [Day1, Day2];
+
+const daysImplemented = routes.length;
 
 const Home = () => {
   const links = React.useMemo(
@@ -29,11 +32,15 @@ const Home = () => {
 function App() {
   return (
     <div className="app">
-      <header className="app-header">\&gt; advent of code 2021</header>
+      <header className="header">
+        <Link to="/">\&gt; advent of code 2021</Link>
+      </header>
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="day1" element={<Day1 />} />
+          {routes.map((Component, idx) => (
+            <Route path={`day${idx + 1}`} element={<Component />} />
+          ))}
         </Routes>
       </main>
     </div>
@@ -41,4 +48,3 @@ function App() {
 }
 
 export default App;
-
