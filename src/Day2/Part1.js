@@ -9,8 +9,7 @@ const commandInterval = 30;
 const Day2Part1 = ({ parent }) => {
   const subRef = React.useRef(null);
 
-  const [commands, setCommands] = React.useState(null);
-  const uiState = useInitialization(setCommands);
+  const { commands, setCommands, uiState } = useInitialization();
 
   const [position, setPosition] = React.useState({
     left: 25,
@@ -48,7 +47,7 @@ const Day2Part1 = ({ parent }) => {
 
       setTimeout(() => setCommands(restCommands), commandInterval);
     }
-  }, [uiState, commands]);
+  }, [uiState, commands, setCommands]);
 
   // when all commands done, show result
   const result = React.useMemo(

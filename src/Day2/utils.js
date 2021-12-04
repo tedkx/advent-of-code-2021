@@ -9,7 +9,8 @@ const createCommandObj = commandText => {
 
 const formatCommands = input => getInputLines(input).map(createCommandObj);
 
-const useInitialization = setCommands => {
+const useInitialization = () => {
+  const [commands, setCommands] = React.useState(null);
   const [uiState, setUiState] = React.useState(null);
   React.useEffect(() => {
     setUiState('initialized');
@@ -17,7 +18,11 @@ const useInitialization = setCommands => {
     setTimeout(() => setUiState('started'), 1000);
   }, []); //eslint-disable-line
 
-  return uiState;
+  return {
+    commands,
+    setCommands,
+    uiState,
+  };
 };
 
 const useSubmarineTracking = (started, subRef, position) => {
