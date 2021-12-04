@@ -75,7 +75,7 @@
   position: fixed;
   font-size: 22px;
   left: calc(50% - 60px);
-  top: calc(50% - 30px);
+  color: white;
 }
 
 @keyframes wave {
