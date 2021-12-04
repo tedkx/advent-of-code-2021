@@ -32,11 +32,7 @@ const Day2 = () => {
       className={`${styles.container} ${level !== 'bottom' ? styles.rise : ''}`}
       ref={seaRef}
     >
-      <div
-        className={`${styles.partSelector} ${
-          level === 'risen' ? styles.visible : ''
-        }`}
-      >
+      <div className={`part-selector ${level === 'risen' ? 'visible' : ''}`}>
         <span
           className={part1 ? 'bold' : ''}
           onClick={() => togglePart('part1')}

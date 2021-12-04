@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.list {
+  background: #444;
+  border: solid 1px #ddd;
+  padding: 12px;
+  margin: 50px auto 25px;
+  font-family: Consolas;
+  color: #008f11;
+  font-size: 18px;
+  max-height: 600px;
+  overflow: auto;
+}
+
+.result {
+  width: 300px;
+  margin-bottom: 12px;
+}

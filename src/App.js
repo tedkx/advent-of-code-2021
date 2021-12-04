@@ -3,8 +3,9 @@ import './App.css';
 import { Link, Routes, Route } from 'react-router-dom';
 import Day1 from './Day1';
 import Day2 from './Day2';
+import Day3 from './Day3';
 
-const routes = [Day1, Day2];
+const routes = [Day1, Day2, Day3];
 
 const daysImplemented = routes.length;
 

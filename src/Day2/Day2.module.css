@@ -45,21 +45,6 @@
   bottom: 10px;
 }
 
-.partSelector {
-  font-size: 18px;
-  padding: 30px 0 0;
-  transition: opacity 0.5s;
-  opacity: 0;
-}
-.partSelector.visible {
-  opacity: 1;
-}
-.partSelector > span {
-  text-decoration: underline;
-  margin: 0 15px;
-  cursor: pointer;
-}
-
 .submarine {
   position: absolute;
   width: 50px;
