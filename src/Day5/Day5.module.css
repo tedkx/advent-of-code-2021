@@ -1,0 +1,46 @@
+.container {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.gridContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  background: #555;
+  border: solid 1px #ddd;
+  box-shadow: 0 0 8px 2px rgb(0, 100, 0, 0.4);
+  color: #008f11;
+  font-family: Consolas;
+  font-size: 18px;
+  padding: 12px;
+}
+.gridRow {
+  display: flex;
+  justify-content: space-between;
+  width: 150;
+}
+.gridValue {
+  text-align: center;
+  width: 22px;
+  transition: all 0.15s;
+}
+.gridValue.vent1 {
+  color: #00bb11;
+  text-shadow: 0 0 10px white;
+}
+.gridValue.vent2 {
+  color: #00cc21;
+  text-shadow: 0 0 10px white, 0 0 25px white;
+}
+.gridValue.vent3 {
+  color: #00e431;
+  text-shadow: 0 0 10px white, 0 0 25px white, 0 0 40px white;
+}
+.gridValue.vent4 {
+  color: #00ff41;
+  text-shadow: 0 0 10px white, 0 0 25px white, 0 0 40px white, 0 0 55px white;
+}
