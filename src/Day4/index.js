@@ -1,8 +1,9 @@
 import React from 'react';
-import Day3Part1 from './Part1';
-import Day3Part2 from './Part2';
+//import styles from './Day4.module.css';
+import Day4Part1 from './Part1';
+import Day4Part2 from './Part2';
 
-const Day3 = () => {
+const Day4 = () => {
   const [part1, setPart1] = React.useState(true);
   const [part2, setPart2] = React.useState(false);
 
@@ -30,9 +31,9 @@ const Day3 = () => {
           Part 2
         </span>
       </div>
-      {part1 ? <Day3Part1 /> : part2 ? <Day3Part2 /> : null}
+      {part1 ? <Day4Part1 /> : part2 ? <Day4Part2 /> : null}
     </div>
   );
 };
 
-export default Day3;
+export default Day4;

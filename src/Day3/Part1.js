@@ -3,7 +3,7 @@ import { getInputLines } from '../utils';
 import { input } from './input'; // sampleInput|input';
 import styles from './Day3.module.css';
 
-const Day3Part2 = () => {
+const Day3Part1 = () => {
   const list = getInputLines(input);
 
   const result = React.useMemo(() => {
@@ -57,4 +57,4 @@ const Day3Part2 = () => {
   );
 };
 
-export default Day3Part2;
+export default Day3Part1;
