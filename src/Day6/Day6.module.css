@@ -1,0 +1,27 @@
+.container {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.sea {
+  position: relative;
+  width: 832px;
+  overflow: hidden;
+  margin: 25px auto;
+}
+.seaBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 2000px;
+  background: linear-gradient(0deg, #020024 0%, #085085 16%, #00d4ff 100%);
+  z-index: -1;
+}
+.seaRow {
+  height: 22px;
+  background-image: url('./lanterfish.png');
+  background-repeat: repeat;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
