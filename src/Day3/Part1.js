@@ -36,8 +36,8 @@ const Day3Part1 = () => {
   return (
     <div className={styles.container}>
       <div className={styles.list}>
-        {list.map(line => (
-          <div>{Array.from(line).join(' ')}</div>
+        {list.map((line, idx) => (
+          <div key={idx}>{Array.from(line).join(' ')}</div>
         ))}
       </div>
       {result && (

@@ -42,8 +42,8 @@ const Day5View = ({ allowDiagonal }) => {
         <div className={styles.gridContainer}>
           {grid.map(arr => (
             <div className={styles.gridRow}>
-              {arr.map(value => (
-                <VentSegment value={value} />
+              {arr.map((value, idx) => (
+                <VentSegment key={idx} value={value} />
               ))}
             </div>
           ))}
