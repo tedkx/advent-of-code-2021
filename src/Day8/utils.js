@@ -158,7 +158,7 @@ const solveWireToSegments = wireToSegment => {
     // i.e. 2 wires have exactly the same 2 segments means
     // that the segments can be eliminated from other wires
     const lengthMatchWires = Object.keys(wireToSegment).filter(
-      key => wireToSegment[key].length === sequenceLength
+      key => wireToSegment[key].length === sequenceLength //eslint-disable-line
     );
     const groups = groupBySegmentCombination(wireToSegment, lengthMatchWires);
 

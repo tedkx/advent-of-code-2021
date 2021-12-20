@@ -1,7 +1,8 @@
 import React from 'react';
-import Day7View from './Day7View';
+import Day9View from './Day9View';
+import { useInput } from './utils';
 
-const Day8 = () => {
+const Day9 = () => {
   const [part1, setPart1] = React.useState(false);
   const [part2, setPart2] = React.useState(false);
 
@@ -12,6 +13,8 @@ const Day8 = () => {
     },
     [setPart1, setPart2]
   );
+
+  const input = useInput();
 
   return (
     <div>
@@ -29,9 +32,13 @@ const Day8 = () => {
           Part 2
         </span>
       </div>
-      {part1 ? <Day7View /> : part2 ? <Day7View additive /> : null}
+      {part1 ? (
+        <Day9View input={input} />
+      ) : part2 ? (
+        <Day9View input={input} showBasins />
+      ) : null}
     </div>
   );
 };
 
-export default Day8;
+export default Day9;
