@@ -1,0 +1,89 @@
+.container {
+  padding: 25px;
+}
+
+.octopusRow {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 800px;
+}
+
+.octopus {
+  position: relative;
+  margin: 10px;
+  height: 24px;
+  width: 24px;
+}
+.octopusIcon {
+  background: inherit;
+  border-radius: 15px;
+  font-size: 24px;
+  font-family: Consolas;
+  font-weight: bold;
+  transition: all 0.15s;
+}
+.energy1 .octopusIcon {
+  fill: #f3e5f5;
+}
+.energy2 .octopusIcon {
+  fill: #e1bee7;
+}
+.energy3 .octopusIcon {
+  fill: #ce93d8;
+}
+.energy4 .octopusIcon {
+  fill: #ba68c8;
+}
+.energy5 .octopusIcon {
+  fill: #ab47bc;
+}
+.energy6 .octopusIcon {
+  fill: #9c27b0;
+}
+.energy7 .octopusIcon {
+  fill: #8e24aa;
+}
+.energy8 .octopusIcon {
+  fill: #7b1fa2;
+}
+.energy9 .octopusIcon {
+  fill: #6a1b9a;
+}
+.energy0 .octopusIcon {
+  fill: #4a148c;
+}
+.energy6,
+.energy7,
+.energy8,
+.energy9,
+.energy0 {
+  color: #f3e5f5;
+}
+.energy0::before {
+  content: ' ';
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+  background-color: #4a148c;
+  border-radius: 50%;
+  z-index: -1;
+  animation: ripple 0.2s ease-out infinite;
+}
+.container.finished .energy0::before {
+  animation: none;
+  background: transparent;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}

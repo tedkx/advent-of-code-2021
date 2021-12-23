@@ -12,6 +12,7 @@ import Day8 from './Day8';
 import Day9 from './Day9';
 import Day10 from './Day10';
 import Day11 from './Day11';
+import Day12 from './Day12';
 
 const routes = [
   Day1,
@@ -25,6 +26,7 @@ const routes = [
   Day9,
   Day10,
   Day11,
+  Day12,
 ];
 
 const daysImplemented = routes.length;
